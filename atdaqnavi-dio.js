@@ -1,0 +1,1 @@
+module.exports=function(i){"use strict";i.nodes.registerType("At iDoorDIO info",function(o){i.nodes.createNode(this,o),this.description=o.description;var t=require("node-atdaqnavi-dio"),e=this;this.on("input",function(i){var o={payload:t.get(e.description)};e.send(o)}),this.on("close",function(){})})};

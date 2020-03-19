@@ -1,0 +1,49 @@
+<!-- please reference http://nodered.org/docs/creating-nodes/node-html -->
+
+<script type="text/x-red" data-template-name="At iDoorDIO info">
+	<div class="form-row">
+        <label for="node-input-description"><i class="fa fa-tasks"></i> Description</label>
+        <input type="text" id="node-input-description" placeholder="PCM-27D24DI,BID#0">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="At iDoorDIO info">
+    <p>Advantech iDoor DIO node can get DI and DO status.</p>
+	<br />
+	<p>The Properity "Device Description" is needed. ex. PCM-27D24DI,BID#0</p>
+	<p>It is depend on your system or hardware setting.</p>
+	<br />
+	<p>There is 1 output array, has two elements, DI and DO.</p>
+	<p>Each element has some array elements, the format is 0 or 1.</p>
+	<p>0: Low</p>
+	<p>1: High</p>
+	<br />
+	<p>Only currently supports <b><a href="https://www.advantech.tw/products/58fb7ea6-15fe-448d-b6f1-575bbbab2bfb/pcm-27d24di/mod_12e14877-e242-46e7-9ed6-f84f8ef64f13" target="_blank">PCM-27D24DI</a></b>.</p>
+	<br /><br /><br /><br /><br />
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('At iDoorDIO info',{
+        category: 'Advantech_IIoT',
+        color:"#C0DEED",
+		paletteLabel: "iDoor DIO",
+        defaults: {
+			description: {value:""},
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "serial.png",
+        align: "right",
+        label: function() {
+            return this.name||"iDoor DIO";
+        },
+        labelStyle: function() {
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

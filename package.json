@@ -1,0 +1,32 @@
+{
+  "name": "node-red-contrib-atdaqnavi-dio",
+  "node-red": {
+    "nodes": {
+      "atdaqnavi-dio": "atdaqnavi-dio.js"
+    }
+  },
+  "version": "1.0.0",
+  "description": "Advantech IIoT iDoor DIO Module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "DAQNavi",
+    "iDoor DIO",
+    "Advantech",
+    "IIoT"
+  ],
+  "bundledDependencies": [
+    "node-atdaqnavi-dio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Advantech-IIoT/node-red-contrib-atdaqnavi-dio"
+  },
+  "author": "Chic.Lee",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-atdaqnavi-dio": "file:../Packages/node-atdaqnavi-dio-1.0.0.tgz"
+  }
+}
