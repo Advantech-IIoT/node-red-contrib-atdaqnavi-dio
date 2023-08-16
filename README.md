@@ -29,7 +29,7 @@ You need get the correct string of device description and the string  depend on 
 ![device_description](./device_description.png)  
 
 ## Tested Platform
-- Windows 10 Enterprise LTSC with node.js 10.19.0
+- Windows 10 Enterprise LTSC with node.js 10.19.0 or node.js 18.14.1
 
 
 ## History
